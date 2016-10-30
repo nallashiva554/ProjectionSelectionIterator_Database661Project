@@ -1,0 +1,20 @@
+// Display catalog XML file;
+$CyDB:> displayXML cyclients/psIterator/Workspace/catalog.xml;
+
+// Display the Expression tree XML file;
+$CyDB:> displayXML cyclients/psIterator/Workspace/expTree.xml;
+
+// Lists all commands available for the prefix PS:>;
+$PS:> ListCommands;
+
+// Runs PS iterator against the given catalog file as catalog.xml, expression tree as expTree.xml, RelationName as Emp and writes the first 10 results into EmpResults.txt;
+$PS:> RunPSIteratorDisplay10 cyclients/psIterator/Workspace/catalog.xml cyclients/psIterator/Workspace/expTree.xml Emp cyclients/psIterator/Workspace/EmpResults.txt;
+
+// Display the results of the output file EmpResults.txt;
+$CyDB:> displayTXT cyclients/psIterator/Workspace/EmpResults.txt;
+
+// Runs PS iterator against the given catalog file as catalog.xml, expression tree as expTree.xml, RelationName as Dept and writes the first 10 results into DeptResults.txt;
+$PS:> RunPSIteratorDisplay10 cyclients/psIterator/Workspace/catalog.xml cyclients/psIterator/Workspace/expTree.xml Dept cyclients/psIterator/Workspace/DeptResults.txt;
+
+// Display the results of the output file DeptResults.txt;
+$CyDB:> displayTXT cyclients/psIterator/Workspace/DeptResults.txt;
